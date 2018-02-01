@@ -1,0 +1,31 @@
+{% extends 'houses/base.html' %}
+
+{% block content %}
+
+<main>
+    <h1>Howdy!!</h1>
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <span>{{ num }}</span>
+    <form action="students/create" method="POST">
+        {% csrf_token %}
+
+
+        {{form.as_p}}
+        <!-- <label for="name">Name:</label>
+        <input type="text" name="name">
+        <label for="wandy">Wand Description:</label>
+        <input type="text" name="wandy"> -->
+        <input type="submit" value="Join!">
+        
+    </form>
+</main>
+
+{% endblock %}

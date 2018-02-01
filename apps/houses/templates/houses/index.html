@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% extends 'houses/base.html' %}
+
+    {% block content %}
+    <main>
+        <h1>Welcome to Ilvermony {{ request.session.peep }}</h1>
+        
+        <ul>
+            <!-- {% for peep in peeps %}
+                <li><p>{[peep.name}} {{peep.cult}}</p></li>
+            {% endfor %} -->
+        </ul>
+
+        <h4>ThunderBird</h4>
+        <ul>
+            {% for student in thunderbirds %}
+            <li>{{student}}</li>
+            {% endfor %}
+        </ul>
+
+        <h4>Wampus</h4>
+        <ul>
+            {% for student in wampii %}
+            <li>{{student}}</li>
+            {% endfor %}
+        </ul>
+
+        <h4>Horned Serpent</h4>
+        <ul>
+            {% for student in snakes %}
+            <li>{{student}}</li>
+            {% endfor %}
+        </ul>
+
+        <h4>Pukwudgie</h4>
+        <ul>
+            {% for student in puks %}
+            <li>{{student}}</li>
+            {% endfor %}
+        </ul>
+        
+    </main>
+    {% endblock %}
+</body>
+</html>
